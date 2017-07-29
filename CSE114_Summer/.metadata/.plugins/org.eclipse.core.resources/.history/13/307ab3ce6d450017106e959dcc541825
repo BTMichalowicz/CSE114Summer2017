@@ -1,0 +1,27 @@
+package homework1;
+//Benjamin Michalowicz (SBU ID: 110982339)
+//Homework 1: Calculating the area and volume of a cylinder
+
+import java.util.Scanner;
+public class CylinderAreaandVolume {
+	
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the radius and length of a cylinder: ");
+		
+		double radius = sc.nextDouble();
+		double length = sc.nextDouble();
+		
+		
+		double area = Math.pow(radius, 2)*Math.PI;
+		
+		double volume = area*length;
+		
+		System.out.printf("The area of the cylinder is: %.4f\n", area);
+		System.out.printf("The volume of the cylinder is %.4f", volume);
+		
+		sc.close();
+	}
+
+}

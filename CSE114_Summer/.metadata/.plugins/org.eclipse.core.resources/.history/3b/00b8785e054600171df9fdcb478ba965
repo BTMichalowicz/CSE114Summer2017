@@ -1,0 +1,52 @@
+/*
+ * Benjamin Michalowicz (SBU ID: 110982339)
+ * Lab 5, part 2: Palindrome Integers
+ */
+
+import java.util.Scanner;
+public class PalindromeInteger {
+	
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter an integer: ");
+		
+		int num1 = sc.nextInt();
+		
+		
+		
+		
+		System.out.println("The number " + num1 + (isPalindrome(reverse(num1))?" is a palindrome.":" is not a palindrome."));
+		
+		
+		
+		
+		
+		sc.close();
+		
+	}
+	
+	
+	public static int reverse(int number){
+		int reversed = 0;
+		
+		String r = new StringBuffer(Integer.toString(number)).reverse().toString();
+		
+		reversed = Integer.parseInt(r);
+		
+		return reversed;
+	}
+	
+	public static boolean isPalindrome(int number){
+		
+		String s = Integer.toString(number);
+		if(s.length()==1) return true;
+		
+		String s2 = new StringBuffer(s).reverse().toString();
+		
+		if(s2.equals(s)) return true;
+		else{
+			return false;
+		}
+	}
+}

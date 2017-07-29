@@ -1,0 +1,53 @@
+/*
+ * Benjamin Michalowicz (SBU ID: 110982339)
+ * Lab 6: part 2: Locker Puzzle
+ */
+public class LockerPuzzle {
+	
+//	static boolean lockers[] = new boolean[101];
+//	
+//	public static void main(String[] args) {
+//		
+//		for(int i = 1; i<lockers.length;i++){
+//			lockers[i] = true;
+//		}
+//		
+//		for(int i = 1; i<=100; i++){
+//			for(int j = i; j<=100; j+=i){
+//				lockers[j] = !lockers[j];
+//			}
+//		}
+//		
+//		System.out.println("The lockers that are open are: ");
+//		for (int i = 0; i <lockers.length; i++) {
+//			System.out.print(lockers[i]==true?"Locker L" + i + "\n":"");
+//			
+//			
+//			
+//		}
+//		
+//	}
+
+	
+	public static void main(String[] args) {
+        boolean[] lockers = new boolean[101];
+        //Open all multiples of 1 before moving on to 2
+        for (int i = 1; i < lockers.length; i++) {
+            lockers[i] = true;
+        }
+
+
+        //open every locker for every multiple of i
+        for (int i = 1; i <= 100; i++) {
+            for (int j = 1; i * j <= 100; j++) {
+                lockers[i * j] = !lockers[i * j];
+            }
+        }
+
+        //Display the indices of the open lockers
+        for (int i = 0; i < lockers.length; i++) {
+            if (lockers[i] == true)
+                System.out.println("locker " + i + " is open.");
+        }
+    }
+}

@@ -1,0 +1,10 @@
+package finalProj;
+
+//Benjamin Michalowicz SBU ID 110982339
+//Final Project: Rush Hour
+
+public class BackingClass1 {
+	
+	boolean[][] table = new boolean[6][6];
+
+}

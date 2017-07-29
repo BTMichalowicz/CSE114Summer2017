@@ -1,0 +1,14 @@
+/*
+ * Benjamin Michalowicz (SBU ID: 110982339)
+ * Lab 6: Part 5: Guess the capitals
+ */
+public class GuessCapitals {
+	
+	/*
+	 * Use a String matrix: The first index is the state, the second index is
+	 * the capital
+	 * 
+	 * Use a counter and a forlopp for O(n) running time
+	 */
+
+}

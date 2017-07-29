@@ -1,0 +1,9 @@
+
+public class Payroll {
+	
+	public static void main(String[] args) {
+		System.out.printf("%f", 10.43);
+		
+	}
+
+}

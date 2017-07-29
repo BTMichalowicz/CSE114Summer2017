@@ -1,0 +1,21 @@
+/*
+ * Benjamin Michalowicz (SBU ID: 110982339)
+ * Homework 5, Part 2: Chinese Zodiac
+ */
+
+import java.util.Scanner;
+public class ChineseZodiac {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter a year: ");
+		
+		int year = input.nextInt();
+		
+		
+	}
+	
+	
+	
+	
+}

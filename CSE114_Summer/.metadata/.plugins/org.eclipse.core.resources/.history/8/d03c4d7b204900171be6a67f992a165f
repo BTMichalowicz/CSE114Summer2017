@@ -1,0 +1,31 @@
+/*
+ * Benjamin Michalowicz (SBU ID: 110982339)
+ * Lab 6: part 2: Locker Puzzle
+ */
+public class LockerPuzzle {
+	
+	static boolean lockers[] = new boolean[101];
+	
+	public static void main(String[] args) {
+		
+		for(int i = 1; i<lockers.length;i++){
+			lockers[i] = true;
+		}
+		
+		for(int i = 1; i<=100; i++){
+			for(int j = i; j<=100; j+=i){
+				lockers[j] = !lockers[j];
+			}
+		}
+		
+		System.out.println("The lockers that are open are: ");
+		for (int i = 0; i <=100; i++) {
+			System.out.print(lockers[i]?"Locker L" + i + "\n":"");
+			
+			
+			
+		}
+		
+	}
+
+}

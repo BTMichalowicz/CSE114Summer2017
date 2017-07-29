@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class CheckPassword{
+	
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter a password:");
+		
+		String s = sc.next();
+		
+		System.out.print(isValid(s)? "Valid Password" : "Invalid Password");
+	}
+	
+	public static boolean isValid(String password){
+		int count = 0;
+		
+		if(password.length()<8){
+			return false;
+		}
+		
+		for(char c:password.toCharArray()){
+			if(Character.isDigit(c)){
+				count++;
+			}
+			if(!Character.isDigit(c) ||!Character.isLetter(c)){
+				return false;
+			}
+		}
+		
+		if(count<2)
+			return false;
+		return true;
+	}
+}
+		

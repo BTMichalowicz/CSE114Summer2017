@@ -1,0 +1,11 @@
+package lecture_programs;
+
+public class RandomTest {
+	
+	public static void main(String[] args) {
+		char c = (char)('a'+Math.random() * ('z'-'a' + 1));
+		
+		System.out.println(c);
+	}
+
+}

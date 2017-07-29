@@ -1,0 +1,15 @@
+//Benjamin Michalowicz (SBU ID: 110982339)
+//Lab 4m oart 1: Kilogram to Pound Conversion with Loop
+public class KiloToPounds {
+	
+	public static void main(String[] args){
+		
+		int pounds = 1;
+		double kilo = 2.20;
+		for (pounds = 1; pounds<=200; pounds++){
+			System.out.println(pounds + "\t" + (pounds*kilo));
+		}
+	
+	}
+
+}

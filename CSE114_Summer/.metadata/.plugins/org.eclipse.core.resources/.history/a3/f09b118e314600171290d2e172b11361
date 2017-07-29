@@ -1,0 +1,51 @@
+package finalProj;
+
+//Benjamin Michalowicz SBU ID 110982339
+//Final Project: Rush Hour
+
+import java.util.Scanner;
+
+public class BackingClass1 {
+	
+	boolean[][] table = new boolean[6][6];
+	
+	
+	
+	
+	
+	public static void main(String[] args){
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to Rush Hour, a variant by Benjamin Michalowicz"
+				+"\n--------------------------------");
+		System.out.print("Enter a number to read the rules(1), play the game(2), or exit(3): ");
+		
+		int answer = sc.nextInt();
+			
+		switch(answer){
+			case 1:
+				printRules();
+				break;
+			case 2:
+				playGame();
+				break;
+			case 3:
+				System.out.println("Goodbye, have a good day!");
+				System.exit(0);
+		}
+	
+	
+	}
+	
+	
+	public static void printRules(){
+		
+	}
+	
+	
+	
+	public static void playGame(){
+		
+	}
+
+}

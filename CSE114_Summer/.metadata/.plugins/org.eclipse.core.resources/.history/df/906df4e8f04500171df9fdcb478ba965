@@ -1,0 +1,30 @@
+//Benjamin Michalowicz (SBU ID: 110982339)
+//Lab 5, part 1: Sum the digits in an integer
+
+import java.util.Scanner;
+public class SumDigits {
+	
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Please enter an integer: ");
+		
+		long sum = sc.nextLong();
+		
+		int result = sumDigits(sum);
+		
+		
+	}
+	
+	
+	public static int sumDigits(long n){
+		int sum = 0;
+		
+		String s = Long.toString(n);
+		
+		
+		
+		return sum;
+	}
+
+}

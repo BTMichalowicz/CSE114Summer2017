@@ -1,0 +1,16 @@
+//Benjamin Michalowicz (SBU ID: 110982339)
+//Homework 5, Part 1: Finding the maximum odd number in an array of integers
+public class RecursiveOddNum {
+	
+	public static int recursiveOdd(int[] arr){
+		if(arr.length ==1){
+			if(arr[0]%2==0){
+				return 1;
+			}else{
+				return arr[0];
+			}
+		}else{
+			int largestNum = 0;
+	}
+
+}

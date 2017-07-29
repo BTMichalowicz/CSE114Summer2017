@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class Payroll {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter employee's name: ");
+		String name = input.nextLine();
+		System.out.print("Enter number of hours worked in a week: ");
+		double hours = input.nextDouble();
+		System.out.print("Enter hourly pay rate: ");
+		double rate = input.nextDouble();
+		System.out.print("Enter federal tax withholding rate: ");
+		double ftax = input.nextDouble();
+		System.out.print("Enter state tax withholding rate: ");
+		double stax = input.nextDouble();
+		
+		
+		double grossPay = hours*rate;
+		
+		double ftax2 = grossPay*ftax;
+		
+		double stax2 = grossPay*stax;
+		
+		double totalDeduct = ftax+stax;
+		
+		double net = grossPay - totalDeduct;
+		
+		String out = "Employee name: "+name+"\n\n";
+		
+		out += "Hours Worked:" + "  " + hours + '\n';    out += "Pay Rate:" + "  $" + rate + '\n';    out += "Gross Pay:" + "  $" + grossPay + '\n';    out += "Deductions:\n";
+		out += "  Federal Withholding (" + ftax2 /(ftax2%10)       + "%):" + "  $" + (int)(ftax2 * 100) / 100.0 + '\n';
+		out += "  State Withholding (" + stax2 /(stax2%10) + "%):"       + "  $" + (int)(stax2 * 100) / 100.0 + '\n';
+		out += "  Total Deduction:" + "  $"       + (int)(totalDeduct * 100) / 100.0 + '\n';
+		out += "Net Pay:" + "   $" + (int)(net * 100) / 100.0;
+		
+		
+		System.out.println(out);
+	}
+
+}

@@ -1,0 +1,31 @@
+package lecture_programs;
+
+public class Jun62017 {
+	public static void main(String[] args) {
+//		int count = 0;
+//		while(count<100){
+//			System.out.println("Hello, World!");
+//			
+//			System.out.println(count++);
+//		}
+		
+		
+		
+		
+		//Now for test-float equality
+
+		
+		boolean b = (0.0==0);
+		
+		double item = 1, sum = 0;
+		
+		while(item!=0){
+			sum+=item;
+			item-=0.1; //Not precise... can only fit whatever is on 8 bytes, but digits beyond that aren't represented
+			//On doubles
+			System.out.println(sum);
+		}
+		
+		
+	}
+}

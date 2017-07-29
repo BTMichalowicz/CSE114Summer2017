@@ -1,0 +1,25 @@
+/*
+ * Benjamin Michalowicz (SBU ID: 110982339)
+ * Homework 3, Part 4: Coupon Collector's Problem Variation
+ */
+public class CouponCollectorProblem {
+	
+	static String[] suits;
+	
+	public static void main(String[] args){
+		int numCount = 0;
+		
+		boolean spades = false, hearts = false, diamonds = false, clubs = false;
+		
+		String[] cardSeq = new String[4];
+		int idx = 0;
+		
+		while(!spades||!hearts||!diamonds||!clubs){
+			String card;
+		}
+		
+		
+		
+	}
+
+}

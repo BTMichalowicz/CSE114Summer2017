@@ -1,0 +1,15 @@
+package lecture_programs;
+
+public class RandomTest {
+	
+	public static void main(String[] args) {
+		char c = (char)('a'+Math.random() * ('z'-'a' + 1));
+		//(Lower bound + Math.random * (Higher bound - lower bound + 1))
+		System.out.println(c);
+		
+		char a = 'a';
+		
+		System.out.println(Character.isAlphabetic(a)?a:"");
+	}
+
+}

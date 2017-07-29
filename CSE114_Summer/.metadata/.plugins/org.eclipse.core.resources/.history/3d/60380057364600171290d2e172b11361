@@ -1,0 +1,66 @@
+package finalProj;
+
+//Benjamin Michalowicz SBU ID 110982339
+//Final Project: Rush Hour
+
+import java.util.Scanner;
+
+public class BackingClass1 {
+	
+	boolean[][] table = new boolean[6][6];
+	
+	
+	
+	
+	
+	public static void main(String[] args){
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to Rush Hour, a variant by Benjamin Michalowicz"
+				+"\n--------------------------------");
+		System.out.print("Enter a number to read the rules(1), play the game(2), or exit(3): ");
+		
+		int answer = sc.nextInt();
+			
+		while(answer!=2 && answer!=3){
+		switch(answer){
+			case 1:
+				printRules();
+				break;
+			case 2:
+				playGame();
+				break;
+			case 3:
+				System.out.println("Goodbye, have a good day!");
+				System.exit(0);
+		}
+		System.out.print("Enter a number to read the rules(1), play the game(2), or exit(3): ");
+	
+		answer = sc.nextInt();
+		}
+		
+		
+		sc.close();
+	
+	
+	}
+	
+	
+	public static void printRules(){
+		System.out.println();
+		String rules = "(Rules taken from Dr. Fodor's BlackBoard page)\nThe game starts 4 cars and 2 trucks initialized by the user on a 6x6 grid."
+				+ "\nTrucks take up 3 squares, and cars take up 2 squares. Their positions can only be in a straight line, vertical or horizontal."
+				+ "\nThe goal is to get the car in line with the exit row through the end of said board by moving vehicles (on their respective grid lines) to accomodate for the car's passage."
+				+ "\nIf a user tries something against these rules, they lose a turn."
+				+ "\nPlayers are only allowed 10 turns. If the game cannot be finished within that amount of turns, game over."
+				+ "\nBest of luck!\n\n";
+		System.out.println(rules);
+	}
+	
+	
+	
+	public static void playGame(){
+		
+	}
+
+}

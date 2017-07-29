@@ -1,0 +1,85 @@
+package lecture_programs;
+
+public class Jun62017 {
+	public static void main(String[] args) {
+		// int count = 0;
+		// while(count<100){
+		// System.out.println("Hello, World!");
+		//
+		// System.out.println(count++);
+		// }
+
+		// Now for test-float equality
+
+//		boolean b = (0.0 == 0);
+//
+//		double item = 1, sum = 0;
+//
+//		while (item != 0) {
+//			sum += item;
+//			item -= 0.1; // Not precise... can only fit whatever is on 8 bytes,
+//							// but digits beyond that aren't represented
+//			// On doubles
+//			System.out.println(sum);
+		//}
+		
+		
+		
+		//Do-While Loop Example
+		
+//		
+//		java.util.Scanner sc = new java.util.Scanner(System.in);
+//		
+//		String selection;
+//		int count = 0;
+//		
+//		do{
+//			System.out.println("Choose from the menu:");
+//
+//			System.out.println("(P) Print the Counter: ");
+//			System.out.println("(Q) Quit: ");
+//			
+//			System.out.print("Enter your choice: ");
+//			
+//			selection = sc.next();
+//			
+//			if(selection.toUpperCase().equals("P")){
+//				System.out.println("Counter = " + count++);
+//			}
+//		
+//					
+//			
+//		}while(!selection.toUpperCase().equals("Q"));
+//		System.out.println("BYE");
+		
+		
+		
+		
+		
+		//FOR-LOOP TESTS
+		
+//		//ONE VARIABLE
+//		for(int i = 0; i<10; i+=1){ //One can be replaced by any value
+//			System.out.println("Welcome to Java: Counter: " + i);
+//		}
+//		System.out.println("Done");
+
+		
+		//TWO VARIABLES
+		
+//		for(int i = 0, j=0; i+j<10; i++,j++){
+//			System.out.println("i is " +i  +" and j is  " +j);
+//		}
+		
+		
+		//Test Nested Loops/Matrix
+		
+		
+		for (int i = 1; i<=10; i++) {
+			for(int j = 1; j<=10; j++){
+				System.out.print(i*j + "\t");
+			}
+			System.out.println();
+		}
+	}
+}

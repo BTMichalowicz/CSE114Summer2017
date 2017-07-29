@@ -1,0 +1,112 @@
+package finalProj;
+
+
+
+
+import javax.swing.JOptionPane;
+
+import com.sun.prism.paint.Color;
+
+import javafx.application.*;
+import javafx.geometry.Insets;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderStroke;
+import javafx.scene.layout.BorderStrokeStyle;
+import javafx.scene.layout.BorderWidths;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+
+import javafx.scene.paint.Paint;
+
+public class GUIMain extends Application{
+	
+	
+	
+	public static void main(String[] args){
+		
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		
+		
+		
+		
+//		TextArea[] ta = new TextArea[5];
+//		
+//		ta[0].setText("Hello");
+		
+		
+		
+		GridPane gp = new GridPane();
+		
+		Button[][] btn = new Button[6][6];
+		
+		for(int i = 0; i<btn.length; i++){
+			for(int j=0; j<btn[i].length; j++){
+				btn[i][j] = new Button();
+				
+				btn[i][j].setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+				btn[i][j].setPadding(new Insets(15, 15, 15, 10));
+			
+			}
+		}
+		
+		
+		for(int i = 0; i<6; i++){
+			for(int j = 0; j<6; j++){
+				
+				Button b = btn[i][j];
+				gp.add(b, i,j);			
+			}
+		}
+		
+		
+		
+		ColumnConstraints c1 = new ColumnConstraints(100,100, Double.MAX_VALUE);
+//		
+		c1.setHgrow(Priority.ALWAYS);
+		ColumnConstraints c2 = new ColumnConstraints(100);
+		ColumnConstraints c3 = new ColumnConstraints(100);
+		ColumnConstraints c4 = new ColumnConstraints(100);
+		ColumnConstraints c5 = new ColumnConstraints(100);
+		ColumnConstraints c6 = new ColumnConstraints(100);
+		
+		gp.getColumnConstraints().addAll(c1, c2, c3, c4, c5, c6);
+		
+		
+		
+		HBox horiz = new HBox();
+		horiz.setPadding(new Insets(10, 10, 10, 10));
+		
+		
+		horiz.getChildren().addAll(gp);
+		
+		arg0.setTitle("Hello, test program");
+		Button bt = new Button("End here");
+		
+		bt.setMaxHeight(30);
+		bt.setMaxWidth(30);
+		
+		
+		arg0.setScene(new Scene(horiz, 700, 700));
+		arg0.show();
+		
+		
+		bt.setOnAction(e-> {
+			JOptionPane.showMessageDialog(null, "Goodbye!");
+			
+			System.exit(0);});
+	}
+
+}
